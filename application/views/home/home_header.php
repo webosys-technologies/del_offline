@@ -70,6 +70,54 @@ left: 12px;
 </style>
 <body>
 
-	
+	<!-- Page Preloder -->
+	<div id="preloder">
+		<div class="loader"></div>
+	</div>
+
+	<!-- header section -->
+	<header class="header-section">
+		<div class="container">
+			<!-- logo -->
+                        <a href="<?php echo base_url() ?>" class="site-logo"><img style="width:116px;" src="<?php echo base_url() ?>assets/images/delto_logo.PNG" alt=""></a>
+                        <div class="title" style="margin-top:30px;">
+                            <span class="title_span" ><span class="blue">D</span>nyansankul <span class="blue">E</span>-<span class="blue">L</span>earning <span class="blue">T</span>raining <span class="blue">O</span>rganization</span>
+                        </div>
+			<div class="nav-switch">
+				<i class="fa fa-bars"></i>
+			</div>
+			<div class="header-info">
+                            
+<!--				<div class="hf-item">
+					<i class="fa fa-clock-o"></i>
+					<p><span>Working time:</span>Monday - Friday: 08 AM - 06 PM</p>
+				</div>-->
+				<div class="hf-item">
+					<i class="fa fa-phone"></i>
+                                        <p><span>Contact us:</span>Call: 09822280896 / 09822342224 <br>
+                                        Email: info@delto.in </p>
+				</div>
+<a href="https://www.facebook.com/delto.in/" target="_blank"><i class="fa fa-facebook-square" style="font-size: 24px;"></i></a>
+			</div>
+		</div>
+	</header>
+	<!-- header section end-->
 
 
+
+	<!-- Header section  -->
+	<nav class="nav-section">
+		<div class="container">
+			<div class="nav-right">
+				<a href=""><i class="fa fa-search"></i></a>
+				<a href=""><i class="fa fa-shopping-cart"></i></a>
+			</div>
+			<ul class="main-menu">
+				<li class="active"><a href="<?php echo base_url('student/index/login');?>" >Home</a></li>
+				<li><a href="<?php echo base_url('center/index/login');?>">Center Login</a></li>
+				<li><a href="<?php echo base_url('student/index/login');?>">Student Login</a></li>
+				
+			</ul>
+		</div>
+	</nav>
+	<!-- Header section end -->

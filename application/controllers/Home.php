@@ -41,9 +41,9 @@ class Home extends CI_Controller {
         
         public function index()
 	{
-	 $this->load->view('home/home_header');          
-         $this->load->view('home/index');
-         $this->load->view('home/home_footer');
+	          
+          redirect('Student/Index/login');
+        
          
         }
         public function about()
