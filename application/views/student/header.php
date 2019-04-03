@@ -418,34 +418,9 @@ $(document).ready(function(){
                <a href="#" onClick="document.location.href=getUrl();">Click me</a>-->
             </li>
           
-            <li class="treeview">
-                <a href="#"  onclick="getUrl()" >
-                <i class="fa fa-upload"></i>
-                <span>Exams</span>
-              </a>
-
-            </li>
-             <li class="treeview">
-                <a href="<?php echo base_url();?>student/Exam_Reviews" >
-                <i class="fa fa-files-o"></i>
-                <span>Exam Reviews</span>
-              </a>
-            </li>
-
-           
             
-            <li class="treeview">
-                <a href="<?php echo base_url();?>student/Reports" >
-                <i class="fa fa-files-o"></i>
-                <span>Reports</span>
-              </a>
-            </li>
-             <li class="treeview">
-                 <a href="<?php echo base_url();?>student/Profile" >
-                <i class="fa fa-child"></i>
-                <span>Manage profile</span>
-              </a>
-            </li>
+           
+             
           
           </ul>
         </section>
