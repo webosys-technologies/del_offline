@@ -289,9 +289,37 @@ document.onkeydown = function(e) {
 <!--           <video id="myVideo" onclick="pauseVid()" src="" width="100%" target="_blank" controls ontimeupdate="time_update(this)" />
                Your browser does not support this type of video.
                 </video>-->
+
+                  <!-- last old videotag by sunil
             <video id="myVideo"  class="video-js" controls  width="640" height="420" data-setup="{}" onended="myFunction()">
            <source src="<?php echo base_url().$topic_video_path;?>" type='video/mp4'>
-            </video>
+            </video> -->
+
+            <!-- Encryption start sunilk-->
+       <?php
+         // $my_file = $topic_video_path;
+          $my_file = 'videos/encrypt/'.$topic_id.'.txt'; 
+         $my_file1=str_replace('%20', ' ', $my_file);
+         
+         if (file_exists($my_file1)) { 
+          $handle = fopen($my_file1, 'r');
+          $data = fread($handle,filesize($my_file1));
+          $encryptionMethod = "AES-256-CBC";  
+          $secretHash = "Invictus";
+          $iv='';
+          $data = openssl_decrypt($data, $encryptionMethod, $secretHash,0,$iv);   ?>
+          <video id="myVideo" controls  class="" controlsList="nodownload" style="margin:auto; width: 100%;" onended="myFunction()" poster="<?php echo base_url();?>assets/images/delto_log.png">
+            <source type="video/mp4" src="data:video/mp4;base64,<?php echo $data ?>">
+          </video>    
+          <?php } 
+          else {?>
+          <div style="text-align: center;">
+          <br><br><br><br><br><br><br><br>
+          <h2>The file does not exist</h2>
+          </div>
+          <?php } ?> 
+      <!-- Encryption End sunilk-->
+
            </td></tr>
              
             
